@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculatrice</title>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <h1>let's do some math !</h1>
+    
+   <div class="contain">
+         <input type="text" name="" id="X" placeholder="X:" />
+    <br />
+         <input type="text" name="" id="Y" placeholder="Y:" />
+  
+    <br/>
+    
+    <button onclick="showSomme()" id="b">➕</button>
+    <button onclick="showmultiplication()" id="b">✖️</button>
+    <button onclick="showsubstruction()" id="b">➖</button>
+    <button onclick="showdivision()" id="b">➗</button> 
+  </div>
+  
+    <h3></h3> 
+    <script>
+      let x = document.querySelector("#X");
+      let y = document.querySelector("#Y");
+      function showSomme() {
+        document.querySelector("h3").innerHTML = sum(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showmultiplication() {
+        document.querySelector("h3").innerHTML = multiplication(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showsubstruction() {
+        document.querySelector("h3").innerHTML = substraction(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showdivision() {
+        document.querySelector("h3").innerHTML = division(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function sum(x, y) {
+        return "sum : " + (x + y);
+      }
+      function multiplication(x, y) {
+        return "multiplication : " + (x * y);
+      }
+      function substraction(x, y) {
+        return "substraction : " + (x - y);
+      }
+      function division(x, y) {
+        return "division : " + (x / y);
+      }
+    </script>
+  </body>
+</html>
